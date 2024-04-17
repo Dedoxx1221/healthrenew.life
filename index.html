@@ -167,6 +167,41 @@ src="https://www.facebook.com/tr?id=402544965698848&ev=PageView&noscript=1"/>
             This groundbreaking discovery is shaking up the Botox industry! They're trying to bring down this website.<br><br>
             Tap the button below and watch the presentation on the 'Egyptian Ritual' until the end, before it's too late.
         </div>
+         <style>
+  #counterWrapper {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  #spotsLeft {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<div id="counterWrapper"> Spots Available To Attend Free Presentation: <span id="spotsLeft">27</span> spots. </div>
+
+<script>
+  function updateCounter() {
+    let currentCount = parseInt(document.getElementById('spotsLeft').textContent, 10);
+    if (currentCount <= 3) {
+      return;
+    }
+
+    const decrement = Math.min(3, currentCount - 3);
+    currentCount -= decrement;
+
+    document.getElementById('spotsLeft').textContent = currentCount;
+
+    setTimeout(updateCounter, 2000); // Atualiza a cada 2 segundos
+  }
+
+  // Inicializa a função de atualização
+  updateCounter();
+</script>
+
+</body>
         <a href="https://theneotonics.com/video.php?aff_id=170827&subid=&utm_campaign={{campaign.name}}&utm_medium=paid-traffic&utm_source={{site_source_name}}&utm_content={{ad.name}}&utm_term={{adset.name}}" class="cta-button">Watch Now</a>
     </div>
     <div class="footer">

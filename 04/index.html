@@ -4,7 +4,7 @@
 fetch('https://ipapi.co/json/')
 .then(response => response.json())
 .then(data => {
-    if (data.country === 'BR') {
+    if (data.country === 'off') {
         // atomicat é ruim
         window.location.href = 'ps.html';
     }

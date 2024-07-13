@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Overdose De Prazer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Para que o conteúdo ocupe toda a altura da viewport */
+            overflow-x: hidden; /* Evita o deslocamento horizontal */
+        }
+        .top-bar {
+            background-color: black;
+            color: white;
+            font-size: 18px; /* Tamanho de fonte menor */
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px; /* Espaçamento das laterais */
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .date {
+            font-weight: bold; /* Deixa a data em negrito */
+            margin-left: 4px; /* Espaço entre 'hoy' e a data */
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Espaçamento acima do vídeo */
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .text2 {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .text-below-video {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .text-below-video span {
+            margin-right: 5px;
+        }
+        .green-button {
+            background-color: #3be20e;
+            color: white;
+            font-size: 22px;
+            font-weight: bold; /* Texto em negrito */
+            text-transform: uppercase;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            display: none; /* Inicia oculto */
+            margin: 20px auto;
+            border-radius: 6px; /* Bordas um pouco arredondadas */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra no botão */
+            transition: box-shadow 0.3s ease; /* Transição suave da sombra */
+        }
+        .green-button.show {
+            display: block; /* Mostra o botão quando a classe 'show' é adicionada */
+        }
+        .green-button:hover {
+            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+            opacity: 0.8;
+        }
+        .footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto; /* Faz com que o rodapé fique no final da página */
+            width: 100%;
+            font-size: 10px; /* Tamanho de fonte menor */
+            box-sizing: border-box; /* Garante que a largura inclui o padding */
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #333;
+        }
+
+        /* Media Queries para dispositivos móveis */
+        @media (max-width: 768px) {
+            .top-bar {
+                font-size: 14px;
+                height: 48px;
+                padding: 0 12px; /* Ajusta o espaçamento das laterais para dispositivos móveis */
+            }
+            .video-container {
+                padding-bottom: 56.25%; /* Mantém a proporção 16:9 */
+            }
+            .green-button {
+                width: 80%;
+                padding: 10px;
+                font-size: 16px;
+            }
+            .text2 {
+                font-size: 14px; /* Reduz o tamanho da fonte em dispositivos móveis */
+            }
+            .text-below-video {
+                font-size: 12px; /* Reduz o tamanho da fonte em dispositivos móveis */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        Assista até o final, essa apresentação sairá do ar no dia<span class="date" id="dataAtual"></span>
+    </div>
+<div class="image-container">
+    <p style="text-align: center; font-weight: bold; font-size: 1.5em;">
+        Sexóloga Ensina <span style="color: red;">4 Movimentos</span> para Fazer Qualquer Mulher <span style="color: red;">Esguichar</span> de Tantos Orgasmos…
+    </p>
+</div>
+
+    <div class="video-container">
+        <script src="https://fast.wistia.com/embed/medias/0mp9aqh2ai.jsonp" async></script>
+        <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+        <div class="wistia_embed wistia_async_0mp9aqh2ai seo=true videoFoam=true" style="height:100%;width:100%">&nbsp;</div>
+    </div>
+
+    <button class="green-button" id="acceder-button">SIM! QUERO TER ACESSO AGORA</button>
+    <div class="text-below-video">
+        <span>&#128266;</span> Certifique-se de que o som esteja ligado.
+    </div>
+    <div class="footer">
+        <p>Copyright 2024 - Overdose de Prazer ®</p>
+        <p>Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Uso</a> · <a href="#">Politicas de Privacidade</a></p>
+    </div>
+
+    <script>
+        // Função para redirecionar para o link ao clicar no botão
+        document.getElementById('acceder-button').addEventListener('click', function() {
+            window.location.href = 'https://checkout.b4you.com.br/-wTBM1-ek2;
+        });
+
+        // Função para mostrar o botão após 28 minutos e 30 segundos (1710 segundos)
+        setTimeout(function() {
+            var button = document.getElementById('acceder-button');
+            button.classList.add('show');
+        }, 1295000); // 1295 segundos em milissegundos
+
+        // Atualizar a data atual dinamicamente
+        document.getElementById('dataAtual').textContent = getDataAtual();
+    </script>
+	    <script>
+        function formatDate(date) {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-11
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const today = new Date();
+            const formattedDate = formatDate(today);
+            document.getElementById("dataAtual").textContent = formattedDate;
+        });
+    </script>
+</body>
+</html>

@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-     <script>
-fetch('https://ipapi.co/json/')
-.then(response => response.json())
-.then(data => {
-    if (data.country === 'BR') {
-        // atomicat é ruim
-        window.location.href = 'ps.html';
-    }
-})
-.catch(error => {
-    console.error('error.', error);
-});
-</script>
     <head>
         <meta name="facebook-domain-verification" content="ffziuej3hbuqeyblp8mlduj9vj7sti" />
     <meta charset="UTF-8">
@@ -155,9 +142,9 @@ location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backred
         <div class="headline">Aging Skin?</div>
         <div class="subheadline">Scientists Reveal <span class="bold-text">"Egyptian Method" Restores</span> <u>Overnight</u></div>
         <div class="image-container">
-            <a href="https://theneotonics.com/video.php?aff_id=170827&subid=Tiktok03"><img src="images/play.gif" alt="Amazing Skin Secret"></a>
+            <a href="https://theneotonics.com/video.php?aff_id=170827"><img src="images/play.gif" alt="Amazing Skin Secret"></a>
         </div>
-        <a href="https://theneotonics.com/video.php?aff_id=170827&subid=Tiktok03" class="cta-button">Tap Here To Watch The Video</a>
+        <a href="https://theneotonics.com/video.php?aff_id=170827" class="cta-button">Tap Here To Watch The Video</a>
         <div class="main-text">
             Renowned scientists have uncovered a secret component in an Egyptian root that's 20 times more potent than Retinol and Neutrogena.<br><br>
             Apply it to your face every night for 15 seconds to revitalize the skin from within... eliminating wrinkles, dark spots and even stubborn fat... without any traditional methods such as expensive treatments, creams, diets or exercises, taking off 10 years from your age.
@@ -200,10 +187,10 @@ location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backred
 </script>
 
 </body>
-        <a href="https://theneotonics.com/video.php?aff_id=170827&subid=Tiktok03" class="cta-button">Watch Now</a>
+        <a href="https://theneotonics.com/video.php?aff_id=170827" class="cta-button">Watch Now</a>
     </div>
     <div class="footer">
-        <p><a href="https://theneotonics.com/video.php?aff_id=170827&subid=Tiktok03" style="color: #fff; text-decoration: none;">Privacy Policy | Earnings | Contact</a></p>
+        <p><a href="https://theneotonics.com/video.php?aff_id=170827" style="color: #fff; text-decoration: none;">Privacy Policy | Earnings | Contact</a></p>
         <p>Copyright 2024.</p>
         <p>All rights reserved</p>
         <p>This site is not affiliated with Facebook, Inc. or Facebook.com, and is not sponsored or endorsed by Facebook</p>
@@ -212,5 +199,35 @@ location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backred
         <p>DISCLAIMER: The content of this website is based on the author’s opinion and is provided on an “AS IS” and “AS AVAILABLE” basis. We recommend conducting your own research and verifying information with other sources when seeking information about health issues. Always review the information carefully with your professional healthcare provider before using any of the protocols presented on this website and/or in the product sold here. The author is not engaged in rendering medical or similar professional services or advice via this website, and the information provided is not intended to replace medical advice offered by a physician or other licensed healthcare provider.</p>
     </div>
      <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
+		<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function getUTMParameters() {
+            let params = {};
+            let queryString = window.location.search.substring(1);
+            let regex = /([^&=]+)=([^&]*)/g;
+            let match;
+            while (match = regex.exec(queryString)) {
+                params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+            }
+            return params;
+        }
+
+        function addUTMParametersToLinks() {
+            let utmParams = getUTMParameters();
+            let utmString = Object.keys(utmParams).map(key => `${key}=${utmParams[key]}`).join('&');
+            let links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                let url = new URL(link.href);
+                if (utmString) {
+                    url.search += (url.search ? '&' : '') + utmString;
+                    link.href = url.toString();
+                }
+            });
+        }
+
+        addUTMParametersToLinks();
+    });
+</script>
 </body>
 </html>

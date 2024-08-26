@@ -91,7 +91,7 @@
     
       (function() {
         var vturbvideoId = "6696da352280df000a5fca92";
-        var SECONDS_TO_DISPLAY = 2118;
+        var SECONDS_TO_DISPLAY = 1;
         var attempts = 0;
         var elsDisplayed = false;
         var alreadyDisplayedKey = 'alreadyElsDisplayed2118';

